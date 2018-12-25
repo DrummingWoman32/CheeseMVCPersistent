@@ -1,0 +1,9 @@
+﻿@model List<CheeseMVC.Models.Cheese>
+
+@{
+    @foreach (var category in ViewBag.categories)
+    {
+        <ul>@category.Name</ul>
+    }
+
+}
