@@ -54,7 +54,8 @@ namespace CheeseMVC.ViewModels
             //<option value="0">Hard</option>
             Categories.Add(new SelectListItem
             {
-                Value = ID,
+                //Value = ((int) ID).ToString(),
+                Value = ((int) CategoryID).ToString(),
                 Text = Name
             });
 
