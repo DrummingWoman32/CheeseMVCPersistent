@@ -47,17 +47,25 @@ namespace CheeseMVC.ViewModels
                 Text = CheeseType.Fake.ToString()
             });*/
 
-            //left off here, part 2, AddCheeseViewModel updating
+            //Categories = new List<SelectListItem>();
 
-            Categories = new List<SelectListItem>();
+            /*
+             * Categories = categories.Select(category => new SelectListItem {Value = ID, Text = Name}
+             */
+
+
 
             //<option value="0">Hard</option>
-            Categories.Add(new SelectListItem
+            foreach(CheeseCategory category in categories)
             {
-                //Value = ((int) ID).ToString(),
-                Value = ((int) CategoryID).ToString(),
-                Text = Name
-            });
+                Categories.Add(new SelectListItem
+                {
+                    //i think the idea is to populate Categories here with the data in categories (the parameter)
+                    Value = ((int)category.ID).ToString(),
+                    Text = category.Name
+                });
+            }
+            
 
         }
 
